@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'ContainerTest5'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9f630b18cd4e47029a96d417b63a5c31 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c634f4d4f0de49a3ba8bbf3fcaa793b5 }}
         package: '*.war'
