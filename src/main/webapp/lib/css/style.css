@@ -1,0 +1,261 @@
+/*=================================================
+		00. 공통 
+=================================================*/
+
+
+body,
+.ui_modal{
+	padding: 0;
+}
+
+.loading-layer{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+	
+	background-color: #333333;
+}
+
+.loading-layer .symbol{
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.loading-layer .symbol h1{
+	font-size: 100px;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	color: #FFFFFF;
+}
+
+
+.loading-layer .symbol h3{
+	margin-top: 0;
+	
+	font-size: 30px;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: #FFFFFF;
+}
+
+svg{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/*****#####===== 미디어 쿼리 =====#####*****/
+/***** xs *****/
+@media (max-width: 767px){
+	.loading-layer .symbol h1{
+		font-size: 50px;
+	}
+	
+	.loading-layer .symbol h3{
+		font-size: 15px;
+	}
+}
+/*=================================================
+		01. 메인 네비게이션
+=================================================*/
+/*****#####===== 전체 =====#####*****/
+#main-gnb {
+	position: fixed;
+	/*overflow: hidden;*/
+	
+	width: 100%;
+	top: 0;
+	background: none;
+	
+	z-index: 2000;
+	
+	-webkit-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#main-gnb.float{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*****#####===== 로고 =====#####*****/
+#main-gnb .navbar-brand{
+	padding: 10px 0 0;
+}
+
+#main-gnb .navbar-brand img{
+	height: 26px;
+}
+#main-gnb.float .navbar-brand img{height:20px; margin-top:3px;}
+
+
+
+/*****#####===== 버튼 =====#####*****/
+#main-gnb .navbar-header .nav-btn{
+	display: none; 
+}
+#main-gnb .navbar-header{position: absolute; left:50%; top:40px; margin-left:-55px;}
+#main-gnb.float .navbar-header{position: relative; display: inline-block; float: left; top:10px; left:30px; margin:0; }
+
+/*****#####===== 리스트 =====#####*****/
+#main-gnb .navbar-nav {
+	width: 100%; list-style: none;
+}
+#main-gnb #menu-navbar{text-align: center;}
+#main-gnb .navbar-nav{position: relative; margin: 0 auto; width: 900px; margin-top:90px;}
+#main-gnb .navbar-nav li{display: inline-block; float: left; list-style: none; width: 150px; height:50px; margin:0; padding: 0; background-color: #000; opacity:0.7; 
+    text-align: center; line-height: 50px; color:#fff; }
+#main-gnb .navbar-nav .contact{background-color: #3d3d3d;}
+#main-gnb .navbar-nav .contact img{margin-right:7px;}
+#main-gnb .navbar-nav li a{ 
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	
+	-webkit-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#main-gnb .navbar-nav li:hover a,
+#main-gnb .navbar-nav li.active a{
+	background: none;
+	
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#main-gnb.float .navbar-nav{float:right; width: 660px;  margin-top:0;}
+#main-gnb.float .navbar-nav li{background: none; width: 110px;}
+#main-gnb.float .navbar-nav .contact img{display: none;}
+
+/*****#####===== 미디어 쿼리 =====#####*****/
+/***** md *****/
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/***** sm *****/
+@media (min-width: 768px) and (max-width: 991px){
+    #main-gnb{display: none;}
+}
+
+/***** xs *****/
+@media (max-width: 767px){
+    
+    #main-gnb{display: none;}
+	
+}
+
+/*=================================================
+		02. 섹션
+=================================================*/
+/*****#####===== 섹션 일반 =====#####*****/
+header,
+section{
+	position: relative;
+	
+	text-align: center;
+}
+
+section{
+	padding: 80px 0 60px;
+}
+
+section.whatwedo{
+	padding: 100px 0px 110px 0px;
+}
+
+.section.height-auto,
+.section.height-auto .fp-tableCell{
+	height: auto !important;
+}
+
+/*****#####===== 섹션 타이틀 =====#####*****/
+.section-title-wrap{
+	margin-bottom: 40px;
+	
+	text-align: center;
+}
+
+.section-title{
+	margin: 0;
+	
+	font-family: 'Montserrat', 'Nanum Gothic';
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: -2px;
+}
+
+.section-title-wrap .separator{
+	height: 3px;
+	margin-bottom: 20px;
+}
+
+.section-subtitle{
+	margin: 0;
+	
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+
+/*****#####===== 미디어 쿼리 =====#####*****/
+/***** md *****/
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/***** sm *****/
+@media (min-width: 768px) and (max-width: 991px){
+	
+}
+
+/***** xs *****/
+@media (max-width: 767px){
+	section{
+		padding: 65px 0 40px;
+	}
+	
+	.section-title-wrap{
+		margin-bottom: 20px;
+	}
+
+	.section-title{
+		margin-bottom: 10px;
+		
+		font-size: 35px;
+	}
+	
+	.section-subtitle{
+		font-size: 15px;
+	}
+}
+/*=================================================
+		02. 푸터
+=================================================*/
+footer{
+	padding: 40px 0;
+	
+	background-color: #2b2b2b;
+	text-align: center;
+	color: #8e8e8e;
+}
+
+footer .company-info{
+	margin: 0; margin-top:20px;font-size: 11px; line-height: 150%;
+}
+
+
+/*****#####===== 미디어 쿼리 =====#####*****/
+/***** xs *****/
+@media (max-width: 767px){
+	footer{
+		font-size: 12px;
+		text-align: center;
+	}
+}
